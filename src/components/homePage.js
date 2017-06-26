@@ -7,7 +7,7 @@ var Home = React.createClass({
         return (
             <div className="jumbotron">
                 <h1>Pluralsight Administration</h1>
-                <p>React, Router, Flux...</p>
+                <p>React, Router, Flux...</p>        
             </div>
         );
     }

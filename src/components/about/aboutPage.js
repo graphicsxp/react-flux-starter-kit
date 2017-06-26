@@ -3,6 +3,13 @@
 var React = require('react');
 
 var About = React.createClass({
+    static: {
+        willTransionTo: function(transition, params, query, callback){
+            if (condition) {
+                
+            }  
+        }
+    },
     render: function () {
         return (
             <div>
