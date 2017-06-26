@@ -77,6 +77,6 @@ gulp.task('watch', function() {
 gulp.task('images', function(){
 	gulp.src(config.paths.images)
 		.pipe(gulp.dest(config.paths.dist + '/images'))
-		.pipe(connect.reload)
+		.pipe(connect.reload())
 })
 gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch', 'images']);
