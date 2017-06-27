@@ -15,7 +15,7 @@ var About = React.createClass({
     //         if (!confirm('Are you sure you want to leave a page that is this boring ?')) {
     //             transition.about();
     //         }
-    //     }
+    //     }sse
 
     // },
     render: function () {

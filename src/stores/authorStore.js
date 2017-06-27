@@ -3,8 +3,9 @@
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
 var EventEmitter = require('events').EventEmitter;
-var assign = require('object-asign');
+var assign = require('object-assign');
 var CHANGE_EVENT = 'change';
+var _ = require('lodash');
 
 var _authors = [];
 
@@ -27,12 +28,27 @@ var AuthorStore = assign({}, EventEmitter.prototype, {
 });
 
 Dispatcher.register(function (action) {
-    switch (action.actionTypes) {
+    switch (action.actionType) {
         case ActionTypes.CREATE_AUTHOR:
             _authors.push(action.author);
             AuthorStore.emitChange();
             break;
-
+        case ActionTypes.INITIALIZE:
+            _authors = action.initialData.authors;
+            AuthorStore.emitChange();
+            break;
+        case ActionTypes.UPDATE_AUTHOR:
+            var existingAuthor = _.find(_authors, { id: action.author.id });
+            var existingAuthorIndex = _.indexOf(_authors, existingAuthor);
+            _authors.splice(existingAuthorIndex, 1, action.author);
+            AuthorStore.emitChange();
+            break;
+        case ActionTypes.DELETE_AUTHOR:
+            _.remove(_authors, function (author) {
+                return action.igd === author.id;
+            });
+            AuthorStore.emitChange();
+            break;
         default:
             break;
     }

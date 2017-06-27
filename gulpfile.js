@@ -81,4 +81,4 @@ gulp.task('images', function () {
 		.pipe(gulp.dest(config.paths.dist + '/images'))
 		.pipe(connect.reload())
 })
-gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch', 'images']);
+gulp.task('default', ['html',  'css', 'lint', 'open', 'watch', 'images']);

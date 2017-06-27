@@ -661,11 +661,13 @@
                       "version": "0.1.43",
                       "from": "source-map@>=0.1.40 <0.2.0",
                       "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz",
+                      "optional": true,
                       "dependencies": {
                         "amdefine": {
                           "version": "1.0.0",
                           "from": "amdefine@>=0.0.4",
-                          "resolved": "https://registry.npmjs.org/amdefine/-/amdefine-1.0.0.tgz"
+                          "resolved": "https://registry.npmjs.org/amdefine/-/amdefine-1.0.0.tgz",
+                          "optional": true
                         }
                       }
                     }
@@ -4084,6 +4086,11 @@
       "from": "lodash@latest",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.4.tgz"
     },
+    "object-assign": {
+      "version": "4.1.1",
+      "from": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
+      "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
+    },
     "react": {
       "version": "0.13.3",
       "from": "https://registry.npmjs.org/react/-/react-0.13.3.tgz",
@@ -4327,6 +4334,11 @@
           "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz"
         }
       }
+    },
+    "toastr": {
+      "version": "2.1.2",
+      "from": "toastr@>=2.1.2 <3.0.0",
+      "resolved": "https://registry.npmjs.org/toastr/-/toastr-2.1.2.tgz"
     },
     "vinyl-source-stream": {
       "version": "1.1.0",
